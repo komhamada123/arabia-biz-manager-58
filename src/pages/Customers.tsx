@@ -268,7 +268,9 @@ const Customers = () => {
                 variant="cyan"
                 size="lg"
                 className="flex items-center gap-2 hover:scale-105 transform transition-all duration-300"
-                onClick={() => handleImport("العملاء")}
+                onClick={() => handleImport("العملاء", (importedData) => {
+                  console.log("تم استيراد عملاء جدد:", importedData);
+                })}
               >
                 <Upload className="w-5 h-5" />
                 استيراد Excel
@@ -277,7 +279,7 @@ const Customers = () => {
                 variant="orange"
                 size="lg"
                 className="flex items-center gap-2 hover:scale-105 transform transition-all duration-300"
-                onClick={() => handleExport("العملاء")}
+                onClick={() => handleExport("العملاء", customers)}
               >
                 <Download className="w-5 h-5" />
                 تصدير Excel
@@ -348,7 +350,7 @@ const Customers = () => {
                   size="sm" 
                   variant="gradient"
                   className="flex-1 flex items-center gap-2 hover:scale-105 transform transition-all duration-300"
-                  onClick={() => handleEdit(customer.id.toString(), "العميل")}
+                  onClick={() => handleEdit(customer.id.toString(), "العميل", customer)}
                 >
                   <Edit className="w-4 h-4" />
                   تعديل
@@ -357,7 +359,7 @@ const Customers = () => {
                   size="sm" 
                   variant="purple" 
                   className="flex-1 hover:scale-105 transform transition-all duration-300"
-                  onClick={() => handleView(customer.id.toString(), "العميل")}
+                  onClick={() => handleView(customer.id.toString(), "العميل", customer)}
                 >
                   عرض التفاصيل
                 </Button>
@@ -365,7 +367,9 @@ const Customers = () => {
                   size="sm" 
                   variant="destructive" 
                   className="hover:scale-105 transform transition-all duration-300 shadow-md hover:shadow-lg"
-                  onClick={() => handleDelete(customer.id.toString(), "العميل")}
+                  onClick={() => handleDelete(customer.id.toString(), "العميل", () => {
+                    console.log(`تم حذف العميل ${customer.name} من النظام`);
+                  })}
                 >
                   <Trash2 className="w-4 h-4" />
                 </Button>

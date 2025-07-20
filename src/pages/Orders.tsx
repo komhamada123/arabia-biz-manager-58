@@ -162,21 +162,31 @@ const Orders = () => {
             <div className="flex items-center space-x-2 space-x-reverse">
               <Button 
                 variant="gradient"
-                onClick={() => handleAddNew("طلب")}
+                size="lg"
+                className="hover:scale-105 transform transition-all duration-300 shadow-glow"
+                onClick={() => handleAddNew("طلب", () => {
+                  console.log("سيتم فتح نموذج إضافة طلب جديد");
+                })}
               >
                 <Plus className="w-4 h-4 ml-2" />
                 إضافة طلب جديد
               </Button>
               <Button 
                 variant="cyan"
-                onClick={() => handleImport("الطلبات")}
+                size="lg" 
+                className="hover:scale-105 transform transition-all duration-300"
+                onClick={() => handleImport("الطلبات", (importedData) => {
+                  console.log("تم استيراد البيانات:", importedData);
+                })}
               >
                 <Upload className="w-4 h-4 ml-2" />
                 استيراد Excel
               </Button>
               <Button 
                 variant="purple"
-                onClick={() => handleExport("الطلبات")}
+                size="lg"
+                className="hover:scale-105 transform transition-all duration-300"
+                onClick={() => handleExport("الطلبات", orders)}
               >
                 <Download className="w-4 h-4 ml-2" />
                 تصدير Excel
@@ -205,7 +215,8 @@ const Orders = () => {
                   <Button 
                     size="sm" 
                     variant="green"
-                    onClick={() => handleView(order.id, "الطلب")}
+                    className="hover:scale-105 transform transition-all duration-300"
+                    onClick={() => handleView(order.id, "الطلب", order)}
                   >
                     <Eye className="w-4 h-4 ml-2" />
                     عرض
@@ -213,7 +224,8 @@ const Orders = () => {
                   <Button 
                     size="sm" 
                     variant="orange"
-                    onClick={() => handleEdit(order.id, "الطلب")}
+                    className="hover:scale-105 transform transition-all duration-300"
+                    onClick={() => handleEdit(order.id, "الطلب", order)}
                   >
                     <Edit className="w-4 h-4 ml-2" />
                     تعديل
@@ -221,7 +233,10 @@ const Orders = () => {
                   <Button 
                     size="sm" 
                     variant="destructive"
-                    onClick={() => handleDelete(order.id, "الطلب")}
+                    className="hover:scale-105 transform transition-all duration-300"
+                    onClick={() => handleDelete(order.id, "الطلب", () => {
+                      console.log(`تم حذف الطلب ${order.id} من القائمة`);
+                    })}
                   >
                     <Trash2 className="w-4 h-4" />
                   </Button>
