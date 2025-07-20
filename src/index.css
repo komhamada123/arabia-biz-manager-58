@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Arabic Management System Design - Professional Arabic Colors */
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Primary Brand Colors - Vibrant for Printing Industry */
+    --primary: 220 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 220 100% 50%;
+    --primary-light: 220 100% 70%;
+
+    /* Creative Industry Colors */
+    --creative-orange: 25 95% 55%;
+    --creative-orange-foreground: 0 0% 100%;
+    
+    --creative-magenta: 320 85% 55%;
+    --creative-magenta-foreground: 0 0% 100%;
+    
+    --creative-cyan: 180 95% 45%;
+    --creative-cyan-foreground: 0 0% 100%;
+    
+    --creative-yellow: 50 100% 55%;
+    --creative-yellow-foreground: 222.2 84% 4.9%;
+    
+    --creative-green: 140 80% 45%;
+    --creative-green-foreground: 0 0% 100%;
+    
+    --creative-purple: 280 85% 60%;
+    --creative-purple-foreground: 0 0% 100%;
+
+    /* Secondary Colors */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+
+    --info: 188 94% 42%;
+    --info-foreground: 0 0% 100%;
+
+    --purple: 263 70% 50%;
+    --purple-foreground: 0 0% 100%;
+
+    --dark-gray: 215 28% 17%;
+    --dark-gray-foreground: 0 0% 100%;
+
+    /* Gradient Variables */
+    --gradient-primary: linear-gradient(135deg, hsl(220 100% 60%) 0%, hsl(280 85% 60%) 100%);
+    --gradient-creative: linear-gradient(45deg, hsl(25 95% 55%) 0%, hsl(320 85% 55%) 25%, hsl(180 95% 45%) 50%, hsl(50 100% 55%) 75%, hsl(140 80% 45%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(50 100% 55%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(180 95% 45%) 0%, hsl(220 100% 60%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(320 85% 55%) 0%, hsl(25 95% 55%) 100%);
+
+    /* Shadow Variables */
+    --shadow-colorful: 0 10px 30px -5px hsl(220 100% 60% / 0.3);
+    --shadow-creative: 0 15px 35px -5px hsl(320 85% 55% / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.4);
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 207 73% 57%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+  }
+
+  html {
+    direction: rtl;
+  }
+
+  /* Arabic RTL Support */
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+
+  /* RTL-specific spacing utilities */
+  .rtl .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  /* Ensure proper RTL text alignment for form inputs */
+  input[type="text"], 
+  input[type="email"], 
+  input[type="search"], 
+  textarea, 
+  select {
+    text-align: right;
+    direction: rtl;
+  }
+
+  /* LTR override for specific content if needed */
+  .ltr input[type="text"], 
+  .ltr input[type="email"], 
+  .ltr input[type="search"], 
+  .ltr textarea, 
+  .ltr select {
+    text-align: left;
+    direction: ltr;
+  }
+}
+
+@layer components {
+  /* Creative Button Variants for Printing Industry */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary-dark transition-all duration-300 shadow-colorful hover:shadow-glow transform hover:scale-105;
+  }
+  
+  .btn-creative {
+    @apply bg-gradient-creative text-white hover:animate-color-shift shadow-creative transform hover:scale-105 hover:shadow-glow transition-all duration-300;
+  }
+  
+  .btn-gradient {
+    @apply bg-gradient-primary text-white hover:bg-gradient-sunset shadow-colorful transform hover:scale-105 hover:shadow-glow transition-all duration-300;
+  }
+  
+  .btn-orange {
+    @apply bg-creative-orange text-creative-orange-foreground hover:bg-creative-orange/90 shadow-creative transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-magenta {
+    @apply bg-creative-magenta text-creative-magenta-foreground hover:bg-creative-magenta/90 shadow-creative transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-cyan {
+    @apply bg-creative-cyan text-creative-cyan-foreground hover:bg-creative-cyan/90 shadow-creative transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-yellow {
+    @apply bg-creative-yellow text-creative-yellow-foreground hover:bg-creative-yellow/90 shadow-creative transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-green {
+    @apply bg-creative-green text-creative-green-foreground hover:bg-creative-green/90 shadow-creative transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-purple {
+    @apply bg-creative-purple text-creative-purple-foreground hover:bg-creative-purple/90 shadow-creative transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-glow {
+    @apply bg-primary text-primary-foreground animate-glow hover:animate-bounce-in shadow-glow transition-all duration-300;
+  }
+
+  /* Creative Card Styles for Printing Industry */
+  .arabic-card {
+    @apply bg-card border border-border rounded-lg shadow-creative p-6 hover:shadow-glow transition-all duration-300 hover:scale-[1.02];
+  }
+  
+  .creative-card {
+    @apply bg-gradient-to-br from-card to-card/80 border border-primary/20 rounded-lg shadow-colorful p-6 hover:shadow-glow transition-all duration-300 hover:scale-[1.02] hover:border-primary/40;
+  }
+  
+  .colorful-card {
+    @apply relative overflow-hidden bg-card border border-border rounded-lg shadow-creative p-6 hover:shadow-glow transition-all duration-300 hover:scale-[1.02];
+  }
+  
+  .colorful-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-creative;
+  }
+
+  /* Arabic Input Styles */
+  .arabic-input {
+    @apply w-full px-3 py-2 border border-input rounded-md bg-background text-foreground text-right;
+  }
+
+  /* Professional Header */
+  .header-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
+  }
+
+  /* Status Badges */
+  .status-active {
+    @apply bg-success/10 text-success border border-success/20 px-2 py-1 rounded text-sm;
+  }
+  
+  .status-pending {
+    @apply bg-warning/10 text-warning border border-warning/20 px-2 py-1 rounded text-sm;
+  }
+  
+  .status-inactive {
+    @apply bg-danger/10 text-danger border border-danger/20 px-2 py-1 rounded text-sm;
+  }
+
+  /* Arabic Table Styles */
+  .arabic-table {
+    @apply w-full border-collapse border border-border rounded-lg overflow-hidden;
+  }
+  
+  .arabic-table th {
+    @apply bg-primary text-primary-foreground p-3 text-right font-semibold;
+  }
+  
+  .arabic-table td {
+    @apply p-3 border-b border-border text-right;
+  }
+}
